@@ -23,7 +23,7 @@ function SubmitButton({
   if (!availableForSale) {
     return (
       <button aria-disabled className={clsx(buttonClasses, disabledClasses)}>
-        Out Of Stock
+        Produto indisponível
       </button>
     );
   }
@@ -38,7 +38,7 @@ function SubmitButton({
         <div className="absolute left-0 ml-4">
           <PlusIcon className="h-5" />
         </div>
-        Add To Cart
+        Adicionar ao carrinho
       </button>
     );
   }
@@ -48,7 +48,7 @@ function SubmitButton({
       onClick={(e: React.FormEvent<HTMLButtonElement>) => {
         if (pending) e.preventDefault();
       }}
-      aria-label="Add to cart"
+      aria-label="Adicionar ao carrinho"
       aria-disabled={pending}
       className={clsx(buttonClasses, {
         'hover:opacity-90': true,
@@ -58,7 +58,7 @@ function SubmitButton({
       <div className="absolute left-0 ml-4">
         {pending ? <LoadingDots className="mb-3 bg-white" /> : <PlusIcon className="h-5" />}
       </div>
-      Add To Cart
+      Adicionar ao carrinho
     </button>
   );
 }

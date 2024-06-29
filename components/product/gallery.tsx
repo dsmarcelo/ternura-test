@@ -76,7 +76,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
             return (
               <li key={image.src} className="h-20 w-20">
                 <Link
-                  aria-label="Enlarge product image"
+                  aria-label="Aumentar imagem do produto"
                   href={createUrl(pathname, imageSearchParams)}
                   scroll={false}
                   className="h-full w-full"
