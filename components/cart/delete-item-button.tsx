@@ -16,7 +16,7 @@ function SubmitButton() {
       onClick={(e: React.FormEvent<HTMLButtonElement>) => {
         if (pending) e.preventDefault();
       }}
-      aria-label="Remove cart item"
+      aria-label="Remover item do carrinho"
       aria-disabled={pending}
       className={clsx(
         'ease flex h-[17px] w-[17px] items-center justify-center rounded-full bg-neutral-500 transition-all duration-200',
