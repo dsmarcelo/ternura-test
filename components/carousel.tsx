@@ -4,6 +4,7 @@ import { GridTileImage } from './grid/tile';
 
 export async function Carousel() {
   // Collections that start with `hidden-*` are hidden from the search page.
+  //TODO: Translate collection name in shopify
   const products = await getCollectionProducts({ collection: 'hidden-homepage-carousel' });
 
   if (!products?.length) return null;
@@ -19,7 +20,7 @@ export async function Carousel() {
             key={`${product.handle}${i}`}
             className="relative aspect-square h-[30vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3"
           >
-            <Link href={`/product/${product.handle}`} className="relative h-full w-full">
+            <Link href={`/produto/${product.handle}`} className="relative h-full w-full">
               <GridTileImage
                 alt={product.title}
                 label={{
