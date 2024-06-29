@@ -318,11 +318,11 @@ export async function getCollections(): Promise<Collection[]> {
   const collections = [
     {
       handle: '',
-      title: 'All',
-      description: 'All products',
+      title: 'Todas',
+      description: 'Todos os produtos',
       seo: {
-        title: 'All',
-        description: 'All products'
+        title: 'Todas',
+        description: 'Todos os produtos'
       },
       path: '/search',
       updatedAt: new Date().toISOString()
