@@ -16,9 +16,7 @@ export default function OpenCart({
 
       {quantity ? (
         <div className="absolute right-0 top-0 -mr-2 -mt-2 h-4 w-4 rounded  bg-primary-500 text-[11px] font-medium text-white">
-          <p className={clsx("text-black")}>
-            {quantity}
-          </p>
+          <p className={clsx('text-black')}>{quantity}</p>
         </div>
       ) : null}
     </div>

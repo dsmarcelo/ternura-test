@@ -1,11 +1,6 @@
-import { SVGProps } from "react"
+import { SVGProps } from 'react';
 const LogoIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="currentColor"
-    viewBox="0 0 707.93 607.7"
-    {...props}
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 707.93 607.7" {...props}>
     <path
       d="M146.31 429.98c-13.32 0-24.12 10.8-24.12 24.12s10.8 24.12 24.12 24.12 24.12-10.8 24.12-24.12-10.8-24.12-24.12-24.12ZM562.25 429.98c-13.32 0-24.12 10.8-24.12 24.12s10.8 24.12 24.12 24.12 24.12-10.8 24.12-24.12-10.8-24.12-24.12-24.12Z"
       className="cls-1"
@@ -19,5 +14,5 @@ const LogoIcon = (props: SVGProps<SVGSVGElement>) => (
       className="cls-1"
     />
   </svg>
-)
-export default LogoIcon
+);
+export default LogoIcon;
