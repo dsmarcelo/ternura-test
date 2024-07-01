@@ -1,7 +1,13 @@
 import clsx from 'clsx';
 import LogoIcon from './icons/logo';
 
-export default function LogoSquare({ size }: { size?: 'sm' | undefined }) {
+export default function LogoSquare({
+  size,
+  className }:
+  {
+    size?: 'sm' | undefined,
+    className?: string
+  }) {
   return (
     <div
       className={clsx('flex flex-none items-center justify-center', {
@@ -10,9 +16,9 @@ export default function LogoSquare({ size }: { size?: 'sm' | undefined }) {
       })}
     >
       <LogoIcon
-        className={clsx({
+        className={clsx(className, {
           'h-[16px] w-[16px]': !size,
-          'h-[10px] w-[10px]': size === 'sm'
+          'h-[10px] w-[10px]': size === 'sm',
         })}
       />
     </div>

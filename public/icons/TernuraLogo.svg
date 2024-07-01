@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 707.93 607.7">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #efbeb9;
-        stroke-width: 0px;
-      }
-    </style>
-  </defs>
-  <g id="Camada_1" data-name="Camada 1">
+<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 707.93 607.7">
+  <g>
     <g>
       <path class="cls-1" d="M146.31,429.98c-13.32,0-24.12,10.8-24.12,24.12s10.8,24.12,24.12,24.12,24.12-10.8,24.12-24.12-10.8-24.12-24.12-24.12Z"/>
       <path class="cls-1" d="M562.25,429.98c-13.32,0-24.12,10.8-24.12,24.12s10.8,24.12,24.12,24.12,24.12-10.8,24.12-24.12-10.8-24.12-24.12-24.12Z"/>
