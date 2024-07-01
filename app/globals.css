@@ -17,5 +17,5 @@
 a,
 input,
 button {
-  @apply focus-visible:outline-none focus-visible:border-primary-200 focus-visible:shadow-lg;
+  @apply focus-visible:border-primary-200 focus-visible:shadow-lg focus-visible:outline-none;
 }
