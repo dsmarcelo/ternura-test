@@ -2,7 +2,7 @@
 
 export default function Error({ reset }: { reset: () => void }) {
   return (
-    <div className="mx-auto my-4 flex max-w-xl flex-col rounded-lg border border-neutral-200 bg-white p-8 md:p-12 dark:border-neutral-800 dark:bg-black">
+    <div className="dark:border-neutral-800 dark:bg-black mx-auto my-4 flex max-w-xl flex-col rounded-lg border border-neutral-200 bg-white p-8 md:p-12">
       <h2 className="text-xl font-bold">Oh no!</h2>
       <p className="my-2">
         Houve um problema com nossa loja. Este pode ser um problema temporário. Tente novamente mais
