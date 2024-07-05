@@ -59,7 +59,7 @@ const key = process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN!;
 type ExtractVariables<T> = T extends { variables: object } ? T['variables'] : never;
 
 export async function shopifyFetch<T>({
-  cache = 'reload',
+  cache = 'force-cache',
   headers,
   query,
   tags,
@@ -77,7 +77,8 @@ export async function shopifyFetch<T>({
       headers: {
         'Content-Type': 'application/json',
         'X-Shopify-Storefront-Access-Token': key,
-        ...headers
+        ...headers,
+        'Cache-Control': 's-maxage=120, stale-while-revalidate=60'
       },
       body: JSON.stringify({
         ...(query && { query }),
