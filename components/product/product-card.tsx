@@ -1,30 +1,33 @@
-import { Product } from "lib/shopify/types";
-import Image from "next/image";
-import Link from "next/link";
+import { Product } from 'lib/shopify/types';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
-    <Link href={`/produto/${product.handle}`} className="min-w-36 w-full max-w-60 flex flex-col p-3 pb-2 bg-white rounded-xl border border-neutral-200 hover:border-primary-500 overflow-hidden">
+    <Link
+      href={`/produto/${product.handle}`}
+      className="flex w-full min-w-36 max-w-60 flex-col overflow-hidden rounded-xl border border-neutral-200 bg-white p-3 pb-2 hover:border-primary-500"
+    >
       <div className="relative aspect-square w-full overflow-hidden">
         <Image
           alt={product.title}
           src={product.featuredImage?.url}
-          style={{ objectFit: "contain", width: "100%", height: "100%" }}
+          style={{ objectFit: 'contain', width: '100%', height: '100%' }}
           fill
           className="rounded-md"
           sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
         />
       </div>
-      <div className="flex flex-col gap-1 mt-2">
-        <p className="text-sm h-10 text-ellipsis">{product.title}</p>
+      <div className="mt-2 flex flex-col gap-1">
+        <p className="h-10 text-ellipsis text-sm">{product.title}</p>
         <p className="text-sm font-medium">
           {`${new Intl.NumberFormat(undefined, {
             style: 'currency',
-            currency: "BRL",
+            currency: 'BRL',
             currencyDisplay: 'narrowSymbol'
           }).format(parseFloat(product.priceRange.maxVariantPrice.amount))}`}
         </p>
       </div>
     </Link>
-  )
+  );
 }
