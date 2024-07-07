@@ -20,6 +20,6 @@ export async function Carousel() {
           </li>
         ))}
       </ul>
-    </div >
+    </div>
   );
 }
