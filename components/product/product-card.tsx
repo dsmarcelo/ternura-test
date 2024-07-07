@@ -11,6 +11,7 @@ export default function ProductCard({ product }: { product: Product }) {
           src={product.featuredImage?.url}
           style={{ objectFit: "contain", width: "100%", height: "100%" }}
           fill
+          className="rounded-md"
           sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
         />
       </div>
