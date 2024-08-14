@@ -1,10 +1,15 @@
+import { fakeProducts } from 'lib/fakerData/fake-products';
 import { getCollectionProducts } from 'lib/shopify';
 import ProductCard from './product/product-card';
 
 export async function Carousel() {
   // Collections that start with `hidden-*` are hidden from the search page.
   //TODO: Translate collection name in shopify
-  const products = await getCollectionProducts({ collection: 'hidden-homepage-carousel' });
+
+  const products =
+    process.env.NODE_ENV === 'production'
+      ? await getCollectionProducts({ collection: 'hidden-homepage-carousel' })
+      : fakeProducts();
 
   if (!products?.length) return null;
 

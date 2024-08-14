@@ -6,6 +6,7 @@ import Footer from 'components/layout/footer';
 import { Gallery } from 'components/product/gallery';
 import { ProductDescription } from 'components/product/product-description';
 import { HIDDEN_PRODUCT_TAG } from 'lib/constants';
+import { fakeProduct, fakeProducts, fakeShopifyProduct } from 'lib/fakerData/fake-products';
 import { getProduct, getProductRecommendations } from 'lib/shopify';
 import { Image } from 'lib/shopify/types';
 import Link from 'next/link';
@@ -16,7 +17,8 @@ export async function generateMetadata({
 }: {
   params: { handle: string };
 }): Promise<Metadata> {
-  const product = await getProduct(params.handle);
+  const product =
+    process.env.NODE_ENV === 'production' ? await getProduct(params.handle) : fakeShopifyProduct;
 
   if (!product) return notFound();
 
@@ -50,7 +52,8 @@ export async function generateMetadata({
 }
 
 export default async function ProductPage({ params }: { params: { handle: string } }) {
-  const product = await getProduct(params.handle);
+  const product =
+    process.env.NODE_ENV === 'production' ? await getProduct(params.handle) : fakeProduct;
 
   if (!product) return notFound();
 
@@ -108,7 +111,8 @@ export default async function ProductPage({ params }: { params: { handle: string
 }
 
 async function RelatedProducts({ id }: { id: string }) {
-  const relatedProducts = await getProductRecommendations(id);
+  const relatedProducts =
+    process.env.NODE_ENV === 'production' ? await getProductRecommendations(id) : fakeProducts(5);
 
   if (!relatedProducts.length) return null;
 
