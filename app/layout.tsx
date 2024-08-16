@@ -25,7 +25,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     <html lang="en" className={GeistSans.variable}>
       <body className="dark:bg-background-dark dark:text-white dark:selection:bg-pink-500 dark:selection:text-white bg-primary-50 text-dark selection:bg-teal-300">
         <Navbar />
-        <main>{children}</main>
+        <main className="mx-auto max-w-7xl">{children}</main>
       </body>
     </html>
   );

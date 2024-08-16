@@ -22,10 +22,9 @@ export default function ProductCard({ product }: { product: Product }) {
       <div className="mt-2 flex flex-col gap-1">
         <p className="h-10 overflow-clip text-ellipsis text-sm">{product.title}</p>
         <p className="text-sm font-medium">
-          {`${new Intl.NumberFormat(undefined, {
+          {`${new Intl.NumberFormat('pt-br', {
             style: 'currency',
-            currency: 'BRL',
-            currencyDisplay: 'narrowSymbol'
+            currency: 'BRL'
           }).format(parseFloat(product.priceRange.maxVariantPrice.amount))}`}
         </p>
       </div>
